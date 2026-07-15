@@ -3,6 +3,10 @@
 
 This is a project that describes how I created a personal cybersecurity homelab. This repo describes the hardware, software, and tools I used to build this homelab. The purpose of the homelab is to experiment and test tools in a controlled enviroment, learn new skills and expand my knowledge on a practical level.  For this project, I used the guide by Day Cyberwox (https://blog.cyberwoxacademy.com/post/building-a-cybersecurity-homelab). 
 
+<p align="center">
+  <img width="1280" height="720" alt="maxresdefault" src="https://github.com/user-attachments/assets/48c607cf-ca5a-4328-a17b-7bc169ed87f0" />
+</p>
+
 > Note: Since the guide uses some software that is considered outdated, like Windows 10 or Windows Server 2019, I used more modern versions and also made some personal tweaks.
 
 ## Table of Contents
@@ -53,4 +57,24 @@ I picked the software that was mentioned in the guide. I will list it here:
 - ### Ubuntu Server and Desktop
   This is more of secondary role, but in order to monitor and use the data from SecOnion and Splunk, I used 2 extra VMs. The       first one being Ubuntu Desktop, and the second one Ubuntu Server.
 
-## Setting up Kali Linux
+## Setting up Kali Linux and Windows
+This was probably the easiest part of the project, To do this, I installed the latest Kali Linux release, and then created a VM in VMware. I added the ISO file and installed Kali Linux normally. Here's a picture of an nmap scan on the Kali Linux console: 
+
+<p align="center">
+  <img width="640" height="395" alt="nmap" src="https://github.com/user-attachments/assets/72882f67-2d94-42a9-96ed-0adb48b2da1f" />
+</p>
+After, I added a Windows 11 Home ISO on a separate VM. For now, I haven't set up pfSense so they are both on NAT. I decided to try to get into the Windows 11 VM through the Kali Linux. For this, I set up a generic username and password on the Windows VM and started working on the Kali Console. I scanned with nmap and saw port 445 - Server Message Block.
+
+<p align="center">
+<img width="136" height="185" alt="bruteforcing" src="https://github.com/user-attachments/assets/b8070af9-c7d7-428e-8c24-54a482331867" />
+</p>
+
+Here, I installed 2 lists with generic usernames and common passwords. Then, I used a simple script I found online to try each one as a Brute Force attack (Script Kiddie, I know!)
+
+After some attempts, it caught on and guessed the login and the password correctly. Then, I used FreeRDP to perform a remote desktop control of the Windows 11 Desktop through Kali.
+
+<p align="center">
+<img width="686" height="445" alt="Screenshot 2026-07-10 160011" src="https://github.com/user-attachments/assets/f1c1e494-be6e-4e29-8687-a60229b54ae8" />
+</p>
+
+But obviously, this wasn't a serious pentest, just something to test the waters and see how the VMs perform and interact with each other. Now to the next part.
