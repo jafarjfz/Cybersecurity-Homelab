@@ -34,7 +34,7 @@ For this project I used my Asus Zenbook S14. This laptop is a compact powerhouse
 - Intel ARC Integrated Graphics 140.
 - 3K OLED 120hz Display.
 
-This laptop is definitely powerful enough to host multiple VMs comfortable. Therefore, I chose it as the host.
+This laptop is definitely powerful enough to host multiple VMs comfortably. Therefore, I chose it as the host.
 
 ## Software Used
 
@@ -51,7 +51,7 @@ I picked the software that was mentioned in the guide. I will list it here:
 - ### Network Segmentation and Firewalls.
   As per the guide, I used pfSense, since it provides enterprise-grade Network Security, Traffic Control, and even capabilities    such as Ad-Blocking, VPN control and WAN hosting. To use the pfSense UI through the web, I connected it with the Kali Linux      machine.
 - ### Windows Active Directory
-  I used the active directory to simulate an professional setting with Admin rights, User groups and Permissions. For this, I      used Windows Server 2025, although the guide used Windows Server 2019. There were some differences in the UI but it wasn't       hard to set it up. As I mentioned earlier, I used Windows 11 Eval copies for the "Employee" desktops.
+  I used the active directory to simulate a professional setting with Admin rights, User groups and Permissions. For this, I      used Windows Server 2025, although the guide used Windows Server 2019. There were some differences in the UI but it wasn't       hard to set it up. As I mentioned earlier, I used Windows 11 Eval copies for the "Employee" desktops.
   
   > Note: I also added a separate VM using a Windows 11 Home ISO. This one was added to simulate attacks on a Home Network.
   
@@ -148,8 +148,9 @@ The guide used the 2019 release of the version, but I decided to use the 2025 ve
 - ### Group Policy Control
   Lets you enforce security settings, restrictions, and configurations across all domain-joined machines at once.
 - ### Simulates a Realistic Attack Surface
+  Simulates an enterprise-level network with admin rights and separate users.
 
-In addition to setting up the Server as the Active Directory, I also made it added it as a CA (Certificate Authority). I installed the server as usual and then promoted it to Domain Controller. After, I added the role of Certificate Authority in the "Active Directory Certificate Services".
+In addition to setting up the Server as the Active Directory, I also added it as a CA (Certificate Authority). I installed the server as usual and then promoted it to Domain Controller. After, I added the role of Certificate Authority in the "Active Directory Certificate Services".
 
 <p align="center">
 <img width="1489" height="868" alt="image" src="https://github.com/user-attachments/assets/339945f3-6bcd-40cc-b687-f78e1019bebf" />
@@ -186,4 +187,4 @@ For this part of the project, I installed a separate Ubuntu Server to use it for
 
 ## Conclusion
 
-Now that this project is finally complete, I'll run some tests later and set it up in a different repo. This was a very fun (a bit difficult) experience. This homelab is a multi-VM enviroment simulating an enterprise network with victims, attackers, and tools for monitoring and segmentation. I tried to emulate it to be as real as possible and I think this will do quite well. My original goal was to set up a lab that simulates a real-world enviroment from a security standpoint and allows to do real analysis on the logs for security monitoring. But, the additions and the personal tweaks were also important for the project. I think the most important skills I learned from this project were related to network segmentation, firewall configuration, log analysis and security monitoring, and enterprise-level system administration. Thank you for attention.
+Now that this project is finally complete, I'll run some tests later and set it up in a different repo. This was a very fun (a bit difficult) experience. This homelab is a multi-VM environment simulating an enterprise network with victims, attackers, and tools for monitoring and segmentation. I tried to emulate it to be as real as possible and I think this will do quite well. My original goal was to set up a lab that simulates a real-world environment from a security standpoint and allows me to do real analysis on the logs for security monitoring. But, the additions and the personal tweaks were also important for the project. I think the most important skills I learned from this project were related to network segmentation, firewall configuration, log analysis and security monitoring, and enterprise-level system administration. Thank you for your attention.
