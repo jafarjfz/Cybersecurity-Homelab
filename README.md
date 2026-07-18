@@ -186,3 +186,4 @@ For this part of the project, I installed a separate Ubuntu Server to use it for
 
 ## Conclusion
 
+Now that this project is finally complete, I'll run some tests later and set it up in a different repo. This was a very fun (a bit difficult) experience. This homelab is a multi-VM enviroment simulating an enterprise network with victims, attackers, and tools for monitoring and segmentation. I tried to emulate it to be as real as possible and I think this will do quite well. My original goal was to set up a lab that simulates a real-world enviroment from a security standpoint and allows to do real analysis on the logs for security monitoring. But, the additions and the personal tweaks were also important for the project. I think the most important skills I learned from this project were related to network segmentation, firewall configuration, log analysis and security monitoring, and enterprise-level system administration. Thank you for attention.
